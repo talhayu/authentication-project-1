@@ -5,9 +5,12 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from './users/entity/user.entity';
+import { JwtModule } from '@nestjs/jwt';
+
 
 @Module({
-  imports: [   
+  imports: [ 
+      
     TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
@@ -19,6 +22,7 @@ import { UserEntity } from './users/entity/user.entity';
     synchronize: true,
   }),
      AuthModule,
+     JwtModule,
      UsersModule
     ],
   controllers: [AppController],
