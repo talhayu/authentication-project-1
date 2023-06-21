@@ -20,4 +20,6 @@ export class UserEntity extends EntityBase{
   refreshToken: string;
   static refreshToken: void;
 
+
+
 }   
