@@ -17,5 +17,7 @@ export class UserEntity extends EntityBase{
 
     @Column({unique: true})
     email: string
+  refreshToken: string;
+  static refreshToken: void;
 
 }   
